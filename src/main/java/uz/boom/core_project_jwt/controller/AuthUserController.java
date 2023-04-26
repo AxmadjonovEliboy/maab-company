@@ -3,6 +3,7 @@ package uz.boom.core_project_jwt.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import uz.boom.core_project_jwt.controller.base.AbstractController;
 import uz.boom.core_project_jwt.criteria.AuthCriteria;
@@ -39,6 +40,7 @@ public class AuthUserController extends AbstractController<AuthUserServiceImpl> 
                 new DataDTO<>(service.register(dto)));
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping(value = PATH + "/auth/users")
     public ResponseEntity<DataDTO<List<AuthUserDTO>>> getAll() {
         log.info("REST:  List Of Users : getAll() ");
