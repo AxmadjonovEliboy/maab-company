@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 public class JwtService {
 
     private static final String SECRET_KEY = "244226452948404D6351665468576D5A7134743777217A25432A462D4A614E64";
-    public static int EXPIRE_ACCESS_TOKEN = 1000 * 60 * 60 * 24;
+    public static int EXPIRE_ACCESS_TOKEN = 1000 * 60 * 10;
     public static long EXPIRE_REFRESH_TOKEN = 1000 * 60 * 60 * 24 * 30L;
 
     public String extractUsername(String token) {

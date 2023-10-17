@@ -24,12 +24,13 @@ public interface AuthUserService extends BaseService {
     /**
      * Get Long
      *
-     * @param dto AuthRegisterDto
+     * @param dto AuthUserCreateDTO
      * @return DataDto
      * @throws RuntimeException if email is exist
      * @apiNote security config written  3.0.0 v
      */
-    Long register(AuthRegisterDTO dto);
+    Long create(AuthUserCreateDTO dto);
+
 
 
     /**
@@ -50,5 +51,17 @@ public interface AuthUserService extends BaseService {
 
 
     Long delete(Long id);
+
+
+//    /**
+//     * Get Long
+//     *
+//     * @param dto AuthRegisterDto
+//     * @return DataDto
+//     * @throws RuntimeException if email is exist
+//     * @apiNote security config written  3.0.0 v
+//     */
+//    Long register(AuthRegisterDTO dto);
+
 
 }

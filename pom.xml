@@ -35,6 +35,12 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -108,8 +114,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-    </dependencies>
+       <!--  For Captcha       -->
+        <dependency>
+            <groupId>com.github.cage</groupId>
+            <artifactId>cage</artifactId>
+            <version>1.0</version>
+        </dependency>
 
+
+
+    </dependencies>
 
 
     <build>
@@ -127,6 +141,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>maab_create_state</finalName>
     </build>
 
 </project>

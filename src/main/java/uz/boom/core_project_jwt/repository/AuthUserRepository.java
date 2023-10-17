@@ -20,8 +20,7 @@ public interface AuthUserRepository extends JpaRepository<AuthUser, Long>, BaseR
 
     Optional<AuthUser> findByPhoneNumberOrEmail(String phoneNumber, String email);
 
-    @Query(value = "select *" +
-            " from security_jwt.auth_user" +
+    @Query(value = "select * from auth_user where auth_user.deleted != '1'" +
             " order by auth_user.id LIMIT :size OFFSET ( :size * :page - :size ) ", nativeQuery = true)
     Optional<List<AuthUser>> findAuthUserByCriteria(@Param("size") Integer limit,@Param("page") Integer page);
 

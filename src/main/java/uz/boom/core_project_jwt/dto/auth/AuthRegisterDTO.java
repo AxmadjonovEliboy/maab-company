@@ -19,5 +19,4 @@ public class AuthRegisterDTO implements BaseDTO {
     private String email;
     private String password;
     private String phoneNumber;
-    private String gender;
 }

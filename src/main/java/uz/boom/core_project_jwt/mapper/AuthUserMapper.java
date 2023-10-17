@@ -25,6 +25,7 @@ public interface AuthUserMapper extends BaseMapper {
     AuthUserDTO toDTO(AuthUser user);
 
     AuthUser fromCreateDTO(AuthUserCreateDTO createDTO);
+
     AuthUser fromRegisterDTO(AuthRegisterDTO registerDto);
 
     AuthUser fromUpdateDTO(AuthUserUpdateDTO updateDTO, @MappingTarget AuthUser target);

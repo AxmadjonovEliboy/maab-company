@@ -18,16 +18,14 @@ public class AuthUserDTO extends GenericDTO {
     private String email;
     private String phoneNumber;
     private String role;
-    private String gender;
     private String status;
 
-    public AuthUserDTO(@NotBlank Long id, String fullName, String email, String phoneNumber, String role, String gender, String status) {
+    public AuthUserDTO(@NotBlank Long id, String fullName, String email, String phoneNumber, String role, String status) {
         super(id);
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.role = role;
-        this.gender = gender;
         this.status = status;
     }
 

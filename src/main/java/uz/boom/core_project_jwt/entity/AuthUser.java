@@ -10,7 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import uz.boom.core_project_jwt.entity.base.Auditable;
-import uz.boom.core_project_jwt.enums.Gender;
 import uz.boom.core_project_jwt.enums.Role;
 
 import java.util.Collection;
@@ -25,7 +24,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-@Where(clause = "deleted='FALSE'")
+@Where(clause = "deleted=false")
 public class AuthUser extends Auditable implements UserDetails {
 
     @Column(nullable = false, name = "full_name")
@@ -42,9 +41,6 @@ public class AuthUser extends Auditable implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
 
     private Boolean status;
 
